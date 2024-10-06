@@ -53,5 +53,4 @@ const valorCarta = (carta) => {
 }
 
 valor = valorCarta(pedirCarta());
-
 console.log({valor})
