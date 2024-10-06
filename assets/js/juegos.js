@@ -10,6 +10,7 @@ let deck = [];
 const tipos = ['C', 'D', 'H', 'S'];
 const especiales = ['A', 'J', 'Q', 'K'];
 
+// Función para crear un nuevo deck
 const crearDeck = () => {
   // Crear un deck de cartas
   for (let i = 2; i <= 10; i++) { // Ciclo para las cartas del 2 al 10
@@ -24,10 +25,22 @@ const crearDeck = () => {
     }
   }
   // console.log(deck); // Mostrar el deck
-  deckFinal = _.shuffle(deck); // Mezclar el deck
-  console.log(deckFinal); // Mostrar el deck mezclado
-  return deckFinal; // Retornar el deck mezclado
+  deckAleatoria = _.shuffle(deck); // Mezclar el deck
+  console.log(deckAleatoria); // Mostrar el deck mezclado
+  return deckAleatoria; // Retornar el deck mezclado
 }
 
 crearDeck();
+
+// Función para pedir una carta
+const pedirCarta = () => {
+  if (deckAleatoria.length === 0) { // Verificar si el deck está vacío
+    throw 'No hay cartas en el deck'; // Mostrar un error
+  }
+  const carta = deckAleatoria.pop(); // Sacar la última carta del deck
+  console.log(deckAleatoria); // Mostrar el deck sin la última carta
+  console.log(carta);
+}
+
+pedirCarta();
 
