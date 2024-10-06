@@ -40,7 +40,18 @@ const pedirCarta = () => {
   const carta = deckAleatoria.pop(); // Sacar la última carta del deck
   console.log(deckAleatoria); // Mostrar el deck sin la última carta
   console.log(carta);
+  return carta; // Retornar la carta
 }
 
-pedirCarta();
+// pedirCarta();
 
+const valorCarta = (carta) => {
+  const valor = carta.substring(0, carta.length - 1); // Obtener el valor de la carta sin el tipo de carta
+  return (isNaN(valor)) ? // Verificar si el valor es un número
+    (valor === 'A') ? 11 : 10 // Verificar si el valor es A, si es A regresar 11, si no regresar 10
+    : valor * 1; // Si no es A, regresar el valor multiplicado por 1
+}
+
+valor = valorCarta(pedirCarta());
+
+console.log({valor})
