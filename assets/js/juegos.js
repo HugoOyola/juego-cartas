@@ -23,7 +23,10 @@ const crearDeck = () => {
       deck.push(especial + tipo); // Agregar la carta al deck
     }
   }
-  console.log(deck);
+  // console.log(deck); // Mostrar el deck
+  deckFinal = _.shuffle(deck); // Mezclar el deck
+  console.log(deckFinal); // Mostrar el deck mezclado
+  return deckFinal; // Retornar el deck mezclado
 }
 
 crearDeck();
