@@ -5,9 +5,6 @@ const miModulo = (() => {
   const tipos = ["C", "D", "H", "S"],
     especiales = ["A", "J", "Q", "K"];
 
-  // let puntosJugador = 0,
-  //   puntosComputadora = 0;
-
   let puntosJugadores = [];
 
   // Referencias HTML
